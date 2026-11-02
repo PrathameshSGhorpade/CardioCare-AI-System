@@ -23,9 +23,6 @@ python train.py
 
 Training saves the fitted scaler and places the trained XGBoost model where the app loads it.
 
-## Attribution and data
-
-This repository is a clean-history copy/adaptation of the project by Ojobo Agbo at [ojobo-tech/Cardiovascular-Disease-Prediction-and-Treatment-Recommendation-System](https://github.com/ojobo-tech/Cardiovascular-Disease-Prediction-and-Treatment-Recommendation-System). See [ATTRIBUTION.md](ATTRIBUTION.md) for provenance and licensing notes.
 
 ## Important use note
 
