@@ -101,3 +101,9 @@ dataset/                    Place the processed training data here
 ## Use note
 
 This application is a demonstration based on a public dataset. Its output is an estimate of the dataset's cardiovascular disease label, not a diagnosis, prescription, or substitute for advice from a qualified healthcare professional.
+
+## Deploy on Vercel
+
+Vercel uses `Dockerfile.vercel` to run the Streamlit app in its container runtime. In the Vercel project settings, set the `PORT` environment variable to `8501` for each deployment environment you use (Production, Preview, and Development). Keep the project root directory set to the repository root, then redeploy from the `main` branch.
+
+The container listens on the configured `PORT` and supports Streamlit's interactive WebSocket connection. The container runtime requires a Vercel plan/project with container deployments enabled.
