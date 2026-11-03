@@ -27,3 +27,27 @@ Training saves the fitted scaler and places the trained XGBoost model where the 
 ## Important use note
 
 The output estimates the likelihood of the dataset's CVD label. It is not a diagnosis or a substitute for care from a qualified healthcare professional.
+
+## Run with Docker
+
+Build the image from the project root:
+
+```bash
+docker build -t cvd-care-system .
+```
+
+Start the app and open [http://localhost:8501](http://localhost:8501):
+
+```bash
+docker run --rm -p 8501:8501 cvd-care-system
+```
+
+Or use Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+Set `APP_PORT` to change the host port, for example `APP_PORT=8502 docker compose up --build`.
+
+The container includes the Streamlit app, its Python modules, and the XGBoost model and scaler it uses. The training dataset and other model artifacts are excluded from the image.

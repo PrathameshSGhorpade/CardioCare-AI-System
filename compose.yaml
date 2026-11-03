@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    image: cvd-care-system:latest
+    ports:
+      - "${APP_PORT:-8501}:8501"
+    restart: unless-stopped
