@@ -1,4 +1,4 @@
-﻿# CardioCare AI System
+# CardioCare AI System
 
 CardioCare AI is a Streamlit application that estimates cardiovascular disease risk from patient measurements. It presents model explanations and risk-based lifestyle and treatment guidance to support educational exploration.
 
@@ -104,6 +104,6 @@ This application is a demonstration based on a public dataset. Its output is an 
 
 ## Deploy on Vercel
 
-Vercel uses `Dockerfile.vercel` to run the Streamlit app in its container runtime. In the Vercel project settings, set the `PORT` environment variable to `8501` for each deployment environment you use (Production, Preview, and Development). Keep the project root directory set to the repository root, then redeploy from the `main` branch.
+The root `vercel.json` selects Vercel's Container framework, and `Dockerfile.vercel` builds the Streamlit app image. In the Vercel project settings, set the `PORT` environment variable to `8501` for each deployment environment you use (Production, Preview, and Development). Keep the project root directory set to the repository root, then redeploy from the `main` branch.
 
 The container listens on the configured `PORT` and supports Streamlit's interactive WebSocket connection. The container runtime requires a Vercel plan/project with container deployments enabled.
